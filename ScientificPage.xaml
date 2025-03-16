@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="onaltimart.ScientificPage"
+             Title="Bilimsel Hesap Makinesi">
+    <VerticalStackLayout Padding="20" VerticalOptions="Center">
+
+        <!-- Giriş ekranı -->
+        <Entry x:Name="Display" IsReadOnly="True" FontSize="30" 
+               HorizontalTextAlignment="End" Margin="0,15" />
+
+        <!-- Bilimsel Hesaplama Tuşları -->
+        <Grid ColumnDefinitions="*,*,*,*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" 
+              ColumnSpacing="5" RowSpacing="5">
+
+            <!-- Üst Satır -->
+            <Button Text="2^x" Grid.Row="0" Grid.Column="0" Clicked="OnScientificOperationClicked"/>
+            <Button Text="pi" Grid.Row="0" Grid.Column="1" Clicked="OnScientificOperationClicked"/>
+            <Button Text="e" Grid.Row="0" Grid.Column="2" Clicked="OnScientificOperationClicked"/>
+            <Button Text="CE" Grid.Row="0" Grid.Column="3" Clicked="OnClearEntryClicked"/>
+            <Button Text="⌫" Grid.Row="0" Grid.Column="4" Clicked="OnBackspaceClicked"/>
+
+            <!-- İkinci Satır -->
+            <Button Text="x²" Grid.Row="1" Grid.Column="0" Clicked="OnScientificOperationClicked"/>
+            <Button Text="1/x" Grid.Row="1" Grid.Column="1" Clicked="OnScientificOperationClicked"/>
+            <Button Text="|x|" Grid.Row="1" Grid.Column="2" Clicked="OnScientificOperationClicked"/>
+            <Button Text="exp" Grid.Row="1" Grid.Column="3" Clicked="OnScientificOperationClicked"/>
+            <Button Text="mod" Grid.Row="1" Grid.Column="4" Clicked="OnOperationClicked"/>
+
+            <!-- Üçüncü Satır -->
+            <Button Text="karekok" Grid.Row="2" Grid.Column="0" Clicked="OnScientificOperationClicked"/>
+            <Button Text="(" Grid.Row="2" Grid.Column="1" Clicked="OnScientificOperationClicked"/>
+            <Button Text=")" Grid.Row="2" Grid.Column="2" Clicked="OnScientificOperationClicked"/>
+            <Button Text="!" Grid.Row="2" Grid.Column="3" Clicked="OnScientificOperationClicked"/>
+            <Button Text="/" Grid.Row="2" Grid.Column="4" Clicked="OnOperationClicked"/>
+
+            <!-- Dördüncü Satır -->
+            <Button Text="x^y" Grid.Row="3" Grid.Column="0" Clicked="OnScientificOperationClicked"/>
+            <Button Text="7" Grid.Row="3" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="8" Grid.Row="3" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="9" Grid.Row="3" Grid.Column="3" Clicked="OnNumberClicked"/>
+            <Button Text="*" Grid.Row="3" Grid.Column="4" Clicked="OnOperationClicked"/>
+
+            <!-- Beşinci Satır -->
+            <Button Text="10^x" Grid.Row="4" Grid.Column="0" Clicked="OnScientificOperationClicked"/>
+            <Button Text="4" Grid.Row="4" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="5" Grid.Row="4" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="6" Grid.Row="4" Grid.Column="3" Clicked="OnNumberClicked"/>
+            <Button Text="-" Grid.Row="4" Grid.Column="4" Clicked="OnOperationClicked"/>
+
+            <!-- Altıncı Satır -->
+            <Button Text="log" Grid.Row="5" Grid.Column="0" Clicked="OnScientificOperationClicked"/>
+            <Button Text="1" Grid.Row="5" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="2" Grid.Row="5" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="3" Grid.Row="5" Grid.Column="3" Clicked="OnNumberClicked"/>
+            <Button Text="+" Grid.Row="5" Grid.Column="4" Clicked="OnOperationClicked"/>
+
+            <!-- Yedinci Satır -->
+            <Button Text="ln" Grid.Row="6" Grid.Column="0" Clicked="OnScientificOperationClicked"/>
+            <Button Text="+/-" Grid.Row="6" Grid.Column="1" Clicked="OnChangeSignClicked"/>
+            <Button Text="0" Grid.Row="6" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="." Grid.Row="6" Grid.Column="3" Clicked="OnNumberClicked"/>
+            <Button Text="=" Grid.Row="6" Grid.Column="4" Clicked="OnEqualsClicked"/>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
